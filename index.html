@@ -1,253 +1,932 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <base href="https://www.saktaup.com/">
+<base href="https://www.taranagarup.com/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="x-author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="robots" content="noodp">
+    <title>তারানগর ইউনিয়ন পরিষদ</title>
+    <link rel="shortcut icon" href="assets_one/img/favicon.ico" type="image/x-icon"/>
+    <link href="assets_one/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="assets_one/css/flexslider.css" rel="stylesheet"/>
+    <link href="assets_one/css/animate.css" rel="stylesheet"/>
+    <link href="assets_one/css/slick.css" rel="stylesheet">
+    <link href="assets_one/css/slick-theme.css" rel="stylesheet">
+    <link href="assets_one/css/jquery.fs.boxer.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets_one/css/mobilenav.css">
+    <!-- Theme skin -->
+    <link href="assets_one/skins/default.css" rel="stylesheet"/>
+    <link href="assets_one/css/style.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href="assets_one/css/bn.css"> -->
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="datepicker/jquery-ui.css" />
+	<!--<script src="datepicker/jquery-1.9.1.js"></script>--> 
+	<script src="datepicker/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$( "#dofb" ).datepicker({
+				changeMonth: true,
+				changeYear: true
+			});
+		});
+	</script>
+	<script language="JavaScript">
+    //Disable right click script
+    var message = "";
+    ///////////////////////////////////
+    function clickIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+    
+    function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+    } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+    }
+    
+    document.oncontextmenu = new Function("return false")
+    </script>
+<script>
+        document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            ( e.keyCode === 85 ||
+             e.keyCode === 123 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+        };
+        $(document).keypress("u",function(e) {
+          if(e.ctrlKey)
+          {
+        return false;
+        }
+        else
+        {
+        return true;
+        }
+        });
+</script> 
+ <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!--- picture uplaod js ---->
+	<script type="text/javascript" src="library/upload/ajaxupload.js"></script>
+	
+	<!--- ajax request function for data serching----->
+	<script type="text/javascript" src="library/ajax_req.js"></script>
+	
+<!--	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<script src="js/google.js"></script>
+
+	<style>
+		body{color:font-family:solaimanlipi, "Times New Roman", Times, serif !important; color:black !important;}
+	</style>
+
 </head>
+<body onload="onload_hide_fun();">
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+                <div class="main-header wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="main-menu-area" data-spy="affix" data-offset-top="150">
+                    <div class="container headwidth">
+                            <div class="navbar-header navbar-left">
+                                <div class="navbar-brand">
+                                    <a href="">
+                                    <img src="logo_images/logo.png" alt="" >
+                                    <span>তারানগর ইউনিয়ন পরিষদ</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <nav id="elg-main-menu" role="navigation" class="elg-menu pull-right">
+                                    <ul class="desktop-menu">
+                                        <li><a href="">হোম </a></li>
+                                        <li><a href="javascript:void(0)">নাগরিক</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="citizen_apps">নাগরিকত্ব সনদের আবেদন</a></li>                                           
+                                                <li><a href="citizen_apps_verify">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="citizen_cc_verify">নাগরিকত্ব সনদ পত্র  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li> 
+									
+									
+									
+										<li><a href="javascript:void(0)">ওয়ারিশ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="successor_apps">ওয়ারিশ সনদের আবেদন</a></li>                                           
+                                                <li><a href="successor_apps_verify">ওয়ারিশ সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="successor_cc_verify">ওয়ারিশ সনদ পত্র  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li>
+									
+									
+									                 <li><a href="javascript:void(0)">পারিবারিক</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="index.php/admin_apps/familyapps">পারিবারিক সনদের আবেদন</a></li>                                           
+                                                                                          
+                                            </ul>
+                                        </li>
+									
+									
+									
+									
+									
+										<li><a href="javascript:void(0)">ট্রেড লাইসেন্স</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="trade_license_apps">ট্রেড লাইসেন্স আবেদন</a></li>                                           
+                                                <li><a href="trade_license_apps_verify">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>                                         
+                                                <li><a href="renew_apps">ট্রেড লাইসেন্স নবায়ন</a></li>                                         
+                                                <li><a href="trade_license_cc_verify">ট্রেড লাইসেন্স  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li>
+										<li><a href="javascript:void(0)">অন্যান্য</a>
+                                            <ul class="sub-menus menusextra">
+                                                <li><a href="citizen_apps?seba=2">মৃত্যু সনদ প্রতয়ন পত্র</a></li>                                           
 
-<body>
+                                                <li><a href="citizen_apps?seba=3">চারিত্রিক সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=4">অবিবাহিত সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=5">ভূমিহীন সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=6">পুনঃ বিবাহ না হওয়া সনদ </a></li>                                         
+                                                <li><a href="citizen_apps?seba=7">বার্ষিক আয়ের প্রত্যয়ন </a></li>                                           
+                                                <li><a href="citizen_apps?seba=8">একই নামের প্রত্যয়ন</a></li>                                           
+                                                <li><a href="citizen_apps?seba=9">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</a></li>                        
+                                                <li><a href="citizen_apps?seba=10">সনাতন ধর্ম  অবলম্বী</a></li>                                           
+                                                <li><a href="citizen_apps?seba=11">অনুমতি পত্র</a></li>                                           
+                                                <li><a href="citizen_apps?seba=12">প্রত্যয়ন পত্র</a></li>                                           
+                                                 <li><a href="index.php/Home/roadpermit">রাস্তা খননের অনুমতি পত্র</a></li> 
+                                                  <li><a href="citizen_apps?seba=13">ভবন নির্মাণের পস্নান অনুমোদন ও অনাপত্তি পত্র</a></li>
+                                           </ul>
+                                        </li>
+										<li><a href="javascript:void(0)">কর্মকর্তাবৃন্দ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="main/get_person/1">জন  প্রতিনিধিগণ</a></li>                                           
+                                                <li><a href="main/get_person/2">কর্মকর্তা ও কর্মচারীগণ</a></li>                                           
+                                                <li><a href="main/get_person/3">উদ্যোক্তা</a></li>                                           
+                                            </ul>
+                                        </li>
+										
+                                        <li><a href="javascript:void(0)">প্রকল্প সমূহ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="javascript:void(0)">চলমান</a></li>                                           
+                                                <li><a href="javascript:void(0)">প্রস্তাবিত</a></li>                                           
+                                                <li><a href="javascript:void(0)">সম্পন্ন</a></li>                                           
+                                            </ul>
+                                        </li>
+										
+                                        <li><a href="http://nothi.gov.bd/dak_nagoriks/NagorikAbedon" target='_blank'>অভিযোগ</a></li>
+                                        <li><a href="contact">যোগাযোগ</a></li>
+                                                                         
+                                </ul>
+                            </nav>
 
-    <!------header div start here---->
+             <div class="mobile-menu">
+                <div class="menu-button">Menu</div>
+                <nav>
+                    <ul class="flexnav">
+                         <li><a href="">হোম </a></li>
+                                        <li><a href="javascript:void(0)">নাগরিক</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="home/nagorikapplication">নাগরিকত্ব সনদের আবেদন</a></li>                                           
+                                                <li><a href="home/filternagorikapplication">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="home/filternagorikcertificate">নাগরিক সনদ পত্র  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li> 
+										<li><a href="javascript:void(0)">ওয়ারিশ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="home/oarishapplication">ওয়ারিশ সনদের আবেদন</a></li>                                           
+                                                <li><a href="home/filteroarishapplication">ওয়ারিশ সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="home/filteroarishcertificate">ওয়ারিশ সনদ পত্র  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li>
+                                        
+                                     <li><a href="javascript:void(0)">পারিবারিক</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="index.php/admin_apps/familyapps">পারিবারিক সনদের আবেদন</a></li>                                           
+                                                                                          
+                                            </ul>
+                                        </li>
+									
+									
+									
 
-    <table height="120px" border="0px" style="width:100%;margin:0px auto;" cellspacing="0" cellpadding="0">
-        <tbody>
-            <tr>
-                <td style="width:1.5in; text-align:center;"><img src="logo_images/logo.png" height="80px" width="80px"></td>
-                <td style="text-align:center;height:60px;font-family:SolaimanLipi;thoma;">
-                    <font style="font-size:21px;letter-spacing:2px; font-weight:bold; color:blue; width:5.5in;">তারানগর ইউনিয়ন পরিষদ</font> <br>
-                    <font style="font-size:12px; font-weight:bold;">তরানগর,<br> কেরানীগঞ্জ, ঢাকা-১৩১২ <br> ফোন :  01842120449, 1923842500</font>
-                </td>
-                <td style="width:1.5in;"></td>
-            </tr>
-        </tbody>
-    </table>
+										<li><a href="javascript:void(0)">ট্রেড লাইসেন্স</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="home/tradelicenseapplication">ট্রেড লাইসেন্স আবেদন</a></li>                                           
+                                                <li><a href="home/filtertradeapplication">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>                                         
+                                                <li><a href="home/renewapplication">ট্রেড লাইসেন্স নবায়ন</a></li>                                         
+                                                <li><a href="home/filtertradecertificate">ট্রেড লাইসেন্স  যাচাই</a></li>                                           
+                                            </ul>
+                                        </li>
+										<li><a href="javascript:void(0)">অন্যান্য</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="citizen_apps?seba=2">মৃত্যু সনদ প্রত্যয়ন পত্র</a></li>                                          
+                                                <li><a href="citizen_apps?seba=3">চারিত্রিক সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=4">অবিবাহিত সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=5">ভূমিহীন সনদ</a></li>                                           
+                                                <li><a href="citizen_apps?seba=6">পুনঃ বিবাহ না হওয়া সনদ </a></li>                                         
+                                                <li><a href="citizen_apps?seba=7">বার্ষিক আয়ের প্রত্যয়ন </a></li>                                           
+                                                <li><a href="citizen_apps?seba=8">একই নামের প্রত্যয়ন</a></li>                                           
+                                                <li><a href="citizen_apps?seba=9">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</a></li>                        
+                                                <li><a href="citizen_apps?seba=10">সনাতন ধর্ম  অবলম্বী</a></li>                                           
+                                                <li><a href="citizen_apps?seba=11">অনুমতি পত্র</a></li>                                           
+                                                <li><a href="citizen_apps?seba=12">প্রত্যয়ন পত্র</a></li>
+                                                 <li><a href="citizen_apps?seba=13">ভবন নির্মাণের পস্নান অনুমোদন ও অনাপত্তি পত্র</a></li>
+                                            </ul>
+                                        </li>
+										<li><a href="javascript:void(0)">কর্মকর্তাবৃন্দ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="main/category">জন  প্রতিনিধিগণ</a></li>                                           
+                                                <li><a href="main/category">কর্মকর্তা ও কর্মচারীগণ</a></li>                                           
+                                                <li><a href="main/category">উদ্যোক্তা</a></li>                                           
+                                            </ul>
+                                        </li>
+										
+                                        <li><a href="javascript:void(0)">প্রকল্প সমূহ</a>
+                                            <ul class="sub-menus">
+                                                <li><a href="main/category">চলমান</a></li>                                           
+                                                <li><a href="main/category">প্রস্তাবিত</a></li>                                           
+                                                <li><a href="main/category">সম্পন্ন</a></li>                                           
+                                            </ul>
+                                        </li>
+                                        <li><a href="<a href="http://nothi.gov.bd/dak_nagoriks/NagorikAbedon" target='_blank'>অভিযোগ</a></li>
+                                        <li><a href="contact">যোগাযোগ</a></li>                                   
+                    </ul>
+                </nav>
+              </div>
+                            </div>
+                        </div>
+                </div>
+                </header>
+   <!-- end header --> <section id="featured">
+    <!-- start slider -->
+    <!-- Slider -->
+    <div class="container-fluid">
+        <div class="col-md-8">
+            <div id="main-slider" class="flexslider">
+                <ul class="slides wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
+				
+								
+								<li><a href="javascript:void(0)">
+				<div class="slide-overley"></div>
+				<img class="lazy" data-original="all/slide/457.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption"></p>
+				</a>
+				</li>
+								<li><a href="javascript:void(0)">
+				<div class="slide-overley"></div>
+				<img class="lazy" data-original="all/slide/72241108_2418846745102246_2020978427133165568_n.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption"></p>
+				</a>
+				</li>
+								<li><a href="javascript:void(0)">
+				<div class="slide-overley"></div>
+				<img class="lazy" data-original="all/slide/14915333_111334436014948_1289857066842172034_n.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption"></p>
+				</a>
+				</li>
+								<li><a href="javascript:void(0)">
+				<div class="slide-overley"></div>
+				<img class="lazy" data-original="all/slide/Cover Photo.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption"></p>
+				</a>
+				</li>
+								<li><a href="javascript:void(0)">
+				<div class="slide-overley"></div>
+				<img class="lazy" data-original="all/slide/BANGLANAGAR-1.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption"></p>
+				</a>
+				</li>
+				                  
+                </ul>
+            </div>
+        </div>
+		        <div class="col-md-4">
+            <div class="key-specials-persons">
+                <div class="our-team">
+                    <div class="persons-images">
+					                        <img src="library/profile/Chairrman.jpg" alt="চেয়ারম্যানের ছবি"  class="img-responsive" height="160px" width="160px"/>
+						                    </div>
+                    <div class="team-prof">
+                        <h3 class="post-title">মোঃ মোশারফ হোসেন</h3>
+                        <span class="post">ইউপি চেয়ারম্যান</span>
+<p>
+
+</p>
+                        <div class="view-mores">
+                            <a href="home/history" class="btn btn-sm btn-mores">বিস্তারিত</a>
+                        </div>
+                    </div>
+                </div>                         
+            </div>
+        </div>
+
+    </div>
+    <!-- end slider -->
+</section>  
+<section class="notice-board-area">
+    <div class="container extrawidth">
+        <div class="row">	
+            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="content-area-boxes">           
+                    <div class="about-content-section special2">
+                        
+                        <div class="about-content-full">
+                            <div class="row">
+								<div class="col-md-6 smallwidth">
+								  <div class="section-title text-left">
+										<h2 class="br3"> ই-আবেদন</h2>
+									</div>
+										<div class="row">
+                                          <div class="col-md-6">
+										  
+                                              <div class="important-links our-service-link">
+                                                  <ul>
+                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps">নাগরিক সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_apps">ট্রেড লাইসেন্স সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="successor_apps"> ওয়ারিশ সনদের আবেদন </a></li>
+                                                      <!--<li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=2">মৃত্যু সনদের আবেদন</a></li>-->
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=3">চারিত্রিক সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=5">ভূমিহীন সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="familly_apps">পারবারিক সনদের আবেদন</a></li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+											<div class="col-md-6">
+                                              <div class="important-links our-service-link">
+                                                  <ul>
+                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=4">অবিবাহিত  সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=6"> পুনঃ বিবাহ না হওয়া সনদের আবেদন</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=7"> বার্ষিক আয়ের প্রত্যয়ন আবেদন </a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=8">একই নামের প্রত্যয়ন  আবেদন</a></li>
+													  <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=11">অনুমতি পত্রের আবেদন</a></li>
+                                                 <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=9">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী আবেদন</a></li>    												
+                                                <li><i class="ion-ios-redo"></i><a href="onapotti">অনাপত্তি সনদপত্র</a></li> 
+                                                      
+                                                  </ul>
+                                              </div>
+                                          </div>
+										</div>
+									</div>
+								<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-6 smallwidth">
+											<div class="section-title text-left">
+										<h2 class="br3">সকল আবেদন যাচাই </h2>
+									</div>
+                                              <div class="important-links our-service-link">
+                                                  <ul>
+                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify">নাগরিক সনদের আবেদন যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_apps_verify">ট্রেড লাইসেন্স সনদের আবেদন যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="renew_apps"> ট্রেড লাইসেন্স নবায়ন যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="successor_apps_verify">ওয়ারিশ সনদের আবেদন যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify"> অন্যান্য সকল  আবেদন যাচাই </a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="family_apps_verify"> পারবারিক সনদপত্র  আবেদন যাচাই </a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify"> অনাপত্তি সনদপত্র  আবেদন যাচাই </a></li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+											<div class="col-md-6">
+											<div class="section-title text-left">
+										<h2 class="br3">সকল সনদ যাচাই </h2>
+									</div>
+                                              <div class="important-links our-service-link">
+                                                  <ul>
+                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">নাগরিক সনদ যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_cc_verify">ট্রেড লাইসেন্স সনদ যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="successor_cc_verify"> ওয়ারিশ সনদ যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">ভূমিহীন সনদ যাচাই</a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">অন্যান্য সকল সনদ যাচাই </a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">পারবারিক সনদপত্র যাচাই </a></li>
+                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">অনাপত্তি সনদপত্র  যাচাই </a></li>
+													  
+                                                  </ul>
+                                              </div>
+                                          </div>
+										</div>
+									</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+</section> 
+<section class="notice-board-area">
+    <div class="container extrawidth">
+        <div class="row">
+            <div class="col-md-7 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="content-area-boxes">           
+                    <div class="tottho">
+                        <div class="section-title text-left">
+                            <h2 class="br2">তারানগর ইউনিয়ন পরিষদ তথ্য</h2>
+                        </div>
+                        <div class="about-content-full">
+                                  <div class="left-boxes-content">
+                                      <div class="row">
+                                          <p><p>&nbsp;</p>
+
+<p>বিস্তারিত আরো খুব শ্রীঘ্রই আপডেট করা হবে।</p>
+</p>
+										  <div class="see-alls">
+												<a href="home/all_history" class="btn btn-see btn-sm">আরো পড়ুন....</a>
+										</div>
+                                      </div>
+                                  </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-5">
+                    <div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
+                        <div class="head-title-bar">
+                            <div class="secs section-title">
+                                <h2 class="s2"><i class="icon ion-document"></i></i> নোটিশ </h2>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+										 <div class="notice-section">
+											<ul class="latest-news">
+																									<li class="one-line"><i class="icon ion-document-text"></i>
+													<a href="main/notice/1">জানুয়ারী মাসের মাসিক সভার নোটিশ</a></li>
+																									<li class="one-line"><i class="icon ion-document-text"></i>
+													<a href="main/notice/2">র্মাচ/২০১৯ইং মাসের মাসিক সভার নোটিশ</a></li>
+																									<li class="one-line"><i class="icon ion-document-text"></i>
+													<a href="main/notice/3">র্মাচ/২০১৯ইং মাসের মাসিক সভার নোটিশ</a></li>
+																									<li class="one-line"><i class="icon ion-document-text"></i>
+													<a href="main/notice/4">ইউনিয়ন পরিষদের এপ্রিল মাসের মাসিক সভার নোটিশ </a></li>
+																									<li class="one-line"><i class="icon ion-document-text"></i>
+													<a href="main/notice/5">এপ্রিলমাসের মাসিক সভার নোটিশ</a></li>
+																							</ul>
+										<div class="see-alls">
+												<a href="main/all_notice" class="btn btn-see btn-sm">সকল নোটিশ</a>
+										</div>
+									 </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+	
+    <section class="gallery-section-area">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="section-title text-center border-h2">
+                    <h2>ইউপি  সচিব ও উদ্যোক্তাগণ</h2>
+                </div>
+               <div class="last-updateds text-right">
+                  
+               </div>
+           </div>
+       </div>
+        <div class="row">
+			<div class="container">
+				 <div class="upimage col-md-3">
+	 <img src="library/profile/avater.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ সুলতান মাহমুদ</h4>
+				   <p>সচিব</p>
+				   <p><a href="home/profileview?mid=c81e728d9d4c2f636f067f89cc14862c">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Rahul amin.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>রুহুল আমিন(Ruhul Amin)</h4>
+				   <p>উদ্যোক্তা</p>
+				   <p><a href="home/profileview?mid=1ff1de774005f8da13f42943881c655f">বিস্তারিত</a></p>
+				 </div> 
+							</div>
+    </div>
+	
+	
+</section> 
+<section class="gallery-section-area">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="section-title text-center border-h2">
+                    <h2>ইউপি  মেম্বার ও  অন্যান্য ব্যক্তিগণ</h2>
+                </div>
+               <div class="last-updateds text-right">
+                  
+               </div>
+           </div>
+       </div>
+        <div class="row">
+			<div class="container">
+				 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ হারুন</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=a87ff679a2f3e71d9181a67b7542122c">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/sadekk member.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ সাদেকুর রহমান</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=c51ce410c124a10e0db5e4b97fc2af39">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ মামুন</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=aab3238922bcc25a6f606eb525ffdc56">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>সালমা আক্তার</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=9bf31c7ff062936a96d3c8bd1f8f2ff3">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Abdul Haqueee.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>আব্দুল হক</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=e4da3b7fbbce2345d7772b0674a318d5">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/amir ali mmm.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>আমির আলী</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=1679091c5a880faf6fb5e6087eb1b2dc">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Jahanaraaaa.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>জাহানারা বেগম</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=8f14e45fceea167a5a36dedd4bea2543">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>আফছার উদ্দিন</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=c9f0f895fb98ab9159f51fd0297e236d">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Sarif Mupp.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>তানবিন আহম্মেদ শরিফ</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=45c48cce2e2d7fbdea1afc51c7c6ad26">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>ইউসুফ রানা</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=d3d9446802a44259755d38e6d163e820">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Rasida mup final.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>রাশিদা বেগম</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=6512bd43d9caa6e02c990b0a82652dca">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ নসু</h4>
+				   <p>মেম্বার</p>
+				   <p><a href="home/profileview?mid=c20ad4d76fe97759aa27a0c99bff6710">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/dofadarrr.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ শহিদুল্লাহ্</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=c74d97b01eae257e44aa9d5bade97baf">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Amannn.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ আমান উল্লাহ</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=37693cfc748049e45d87b8c7d8b9aacd">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/jodge miah.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ জজ মিয়া মোল্লা</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=6f4922f45568161a8cdf4ad2299f6d23">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/nasir.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>নাছির উদ্দিন মোল্লা</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=70efdf2ec9b086079795c442636b55fb">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/Rupcanaan.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ রুপ চাঁন</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=1f0e3dad99908345f7439f8ffabdffc4">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/badsha miah.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ বাদশা মিয়া</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=98f13708210194c475687be6106a3b84">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/baccchu.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোঃ বাচ্চু মিয়া</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=3c59dc048e8850243be8079a5c74d079">বিস্তারিত</a></p>
+				 </div> 
+					 <div class="upimage col-md-3">
+	 <img src="library/profile/sufiaaaa.jpg" class="" height="160px" width="160px"/>
+				   
+				   <h4>মোসাঃ সুফিয়া বেগম</h4>
+				   <p>গ্রামপুলিশ</p>
+				   <p><a href="home/profileview?mid=b6d767d2f8ed5d21a44b0e5886680cb9">বিস্তারিত</a></p>
+				 </div> 
+							</div>
+    </div>
+	
+	
+</section>
+<section class="removeshadow">
+							<div class="container">
+								<div class="row rowextra">		
+										 <div class="upimage col-md-3"><a href="home/fighters">
+										   <img src="assets_one/img/freedom.png"/>
+										   <h4>মুক্তিযোদ্ধা তালিকা</h4></a>
+										   
+										 </div> 
+											<div class="upimage col-md-3"><a href="home/voterList">
+										   <img src="assets_one/img/voter.png"/>
+										   <h4>ভোটার তালিকা</h4></a>
+										   
+										 </div> 
+										 <div class="upimage col-md-3"><a href="home/oldmanStipend">
+										   <img src="assets_one/img/old.png"/>
+										   <h4>বয়স্ক ভাতা</h4></a>
+										  
+										 </div> 
+										 <div class="upimage col-md-3"><a href="home/poorman">
+										   <img src="assets_one/img/dustho.png"/>
+											<h4>দুস্থ তালিকা</h4></a>
+										</div>
+								</div>
+								
+									
+									 <div class="row rowextra"><a href="home/matrittakalin">
+										 <div class="upimage col-md-3">
+										   <img src="assets_one/img/ma.png"/>
+										   <h4>মাতৃত্যকালীন ভাতা</h4></a>
+										   
+										 </div> <div class="upimage col-md-3"><a href="home/bidhoba">
+										   <img src="assets_one/img/bidoba1.png"/>
+										   <h4>বিধবা ভাতা</h4></a>
+										   
+										 </div> <div class="upimage col-md-3"><a href="home/protibondi">
+										   <img src="assets_one/img/protibondi.png"/>
+										   <h4>প্রতিবন্ধী ভাতা</h4></a>
+										  
+										 </div> 
+										 <div class="upimage col-md-3"><a href="home/vgd">
+										   <img src="assets_one/img/bgb1.png"/>
+											<h4>ভি জি ডি</h4></a>
+										  
+										</div>
+									</div>
+									<div class="row rowextras"><a href="Assesment_home/khanasamuh">
+										 <div class="upimage col-md-3">
+										   <img src="assets_one/img/khana.png"/>
+										   <h4>খানা সমূহ</h4></a>
+										   
+										 </div> <div class="upimage col-md-3"><a href="javascript:void(0)">
+										   <img src="assets_one/img/dailycollection.png"/>
+										   <h4>দৈনিক কালেকশন</h4></a>
+										   
+										 </div> <div class="upimage col-md-3"><a href="javascript:void(0)">
+										   <img src="assets_one/img/monthley.png"/>
+										   <h4>মাসিক কালেকশন</h4></a>
+										  
+										 </div> 
+										 <div class="upimage col-md-3"><a href="javascript:void(0)">
+										   <img src="assets_one/img/yearly.png"/>
+											<h4>অর্থ বছরের কালেকশন</h4></a>
+										  
+										</div>
+									</div>
+								</div>
+							
+						</section>
 
 
+	
+	  <!--- <section class="gallery-section-area">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="section-title text-center border-h2">
+                    <h2>ফটো গ্যালারি</h2>
+                </div>
+               <div class="last-updateds text-right">
+                  
+               </div>
+           </div>
+       </div>
+        <div class="row">
+            <div class="gallery-section-contents">
+                                
+            </div>
+        </div>
+    </div>
+</section>-->
 
-    <!----header div close here---->
+    <div class="content-area-sections">
+        <div class="container">
+            <div class="row">
+               
+            </div>
+        </div>
+    </div>
+	
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+              <div class="left-boxes-content">
+                  <div class="widget">
+                    <h5 class="widgetheading">ই-সেবা</h5>
+                  </div>
+                  <div class="important-links">
+                      <ul>
+                         <li> <a href="citizen_apps">নাগরিক সনদের আবেদন</a></li>
+                         <li> <a href="natrack">নাগরিক আবেদন যাচাই</a></li>
+                          <li> <a href="trade_license_apps">ট্রেড লাইসেন্স আবেদন </a></li>
+                          <li> <a href="renew_apps">ট্রেড লাইসেন্স নবায়ন</a> </li>
+                          <li> <a href="tatrack">ট্রেড লাইসেন্স আবেদন যাচাই</a> </li>
+                          <li> <a href="successor_apps">ওয়ারিশ সনদের আবেদন</a> </li>
+                          <li> <a href="wctrack">ওয়ারিশ সনদের আবেদন যাচাই</a> </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+              <div class="left-boxes-content">
+                  <div class="widget">
+                    <h5 class="widgetheading">গুরুত্বপূর্ন লিংক</h5>
+                  </div>
+                  <div class="important-links">
+                      <ul>
+                          <li> <a href="http://www.passport.gov.bd/">পাসপোর্টের আবেদন ফরম</a></li>
+                          <li> <a href="http://bris.lgd.gov.bd/pub/">অনলাইন জন্ম/মৃত্যু নিবন্ধন</a></li>
+                          <li> <a href="http://www.bmet.gov.bd/BMET/onlinaVisaCheckAction">ভিসা যাচাই</a> </li>
+                          <li> <a href="http://app.dghs.gov.bd/inst_info/mobile_search.php">ই-স্বাস্থ্য সেবা</a> </li>
+                          <li> <a href="http://www.forms.gov.bd/">সরকারি ফরম</a> </li>
+                          <li> <a href="http://dpe.portal.gov.bd/site/page/256bd7b9-cfa4-4f71-afa6-3b8262f4021f">সমাপনী পরীক্ষার ফলাফল</a> </li>
+                          <li> <a href="https://www.eprocure.gov.bd/">ই-টেন্ডার(e-GP) </a> </li>
 
-    <table align="center" style="height:42px; border:1px; margin-top:5px; margin-bottom:15px;">
-        <tbody>
-            <tr>
-                <td style="padding-top:5px;">
-                    <font style="font-weight:bold; font-size:18px;"><u>ওয়ারিশ সনদপত্র</u></font>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table border="1" style=" height:30px; width:100% " cellpadding="0" cellspacing="0">
-        <tbody>
-            <tr>
-                <td style="width:200px; text-align:center; font-size:20px; font-weight:bold;">ওয়ারিশ সনদ নং :</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">২</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">০</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">২</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৪</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">২</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৬</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">১</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৩</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৮</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৭</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৭</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">০</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">০</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৭</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৮</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৫</td>
-
-                <td style="text-align:center; font-weight:bold; font-size:20px;">৪</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table border="0" style="height:300px; width:100%; padding-left:5px;" cellspacing="0">
-        <tbody>
-            <tr>
-                <td colspan="4" align="left" style="font-size:18px;text-indent:50px; padding-top:5px;">এই মর্মে প্রত্যয়ণ করা যাইতেছে যে,</td>
-            </tr>
-            <tr>
-                <td style="font-size:18px; text-align:center; font-color:black; ">নাম </td>
-                <td>
-                    <font style="font-size:18px;  font-weight:bold;">: মোসাঃ সেলিনা আক্তার </font>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td style="font-size:18px; text-align:center; ">পিতা</td>
-                <td>
-                    <font style="font-size:18px;  font-weight:bold;">: মৃত সৈয়দ আলী </font>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td style="font-size:18px; text-align:center;">মাতা </td>
-                <td>
-                    <font style="font-size:18px;  font-weight:bold;">: মৃত রহিমা বেগম </font>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="width:45%; padding-top:15px;">
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    <p style="text-align:left;text-decoration:underline;font-size:18px;text-align:center;font-weight:bold;"> বর্তমান ঠিকানা </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:148px;text-align:right; padding-right:10px; font-size:20px;">গ্রাম</td>
-                                <td>
-                                    <font style="font-size:18px;">: নিশানবাড়ী</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:158px;text-align:right; padding-right:10px; font-size:20px;">ডাকঘর</td>
-                                <td>
-                                    <font style="font-size:18px;">: কলাতিয়া-১৩১০</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:158px;text-align:right; padding-right:10px; font-size:20px;">থানা</td>
-                                <td>
-                                    <font style="font-size:18px;">: কেরানীগঞ্জ মডেল</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:158px;text-align:right; padding-right:10px; font-size:20px;">জেলা</td>
-                                <td>
-                                    <font style="font-size:18px;">: ঢাকা </font>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-                <td colspan="2" style="width:55%;padding-top:15px;">
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    <p style="text-align:left; text-decoration:underline;font-size:18px;padding-left:60px;font-weight:bold;"> স্থায়ী ঠিকানা </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:100px;text-align:right; padding-right:10px; font-size:20px;">গ্রাম</td>
-                                <td>
-                                    <font style="font-size:18px;">: নিশানবাড়ী </font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:right; padding-right:10px; font-size:20px;">ডাকঘর </td>
-                                <td>
-                                    <font style="font-size:18px;">: কলাতিয়া-১৩১০</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:right; padding-right:10px; font-size:20px;">থানা</td>
-                                <td>
-                                    <font style="font-size:18px;">: কেরানীগঞ্জ মডেল</font>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:right; padding-right:10px; font-size:20px;">জেলা</td>
-                                <td>
-                                    <font style="font-size:18px;">: ঢাকা </font>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td nowrap="" style="font-size:18px; text-align:center;">ওয়ার্ড নং </td>
-                <td>
-                    <font style="font-size:18px;  font-weight:bold;">: ০৩</font>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td nowrap="" style="font-size:18px; text-align:center;">ন্যাশনাল আইডি নং </td>
-                <td>
-                    <font style="font-size:18px;  font-weight:bold;">: </font>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <font style="font-size:18px; padding-left:20px;"> অত্র ইউনিয়নের অধিবাসী ছিলেন। তিনি মৃত্যুকালে নিম্নলিখিত ওয়ারিশগনকে রাখিয়া মৃত্যু বরণ করেন।</font>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table cellpadding="0" cellspacing="0" style="min-height:100px; width:95%; margin-top:12px;font-size:14px;" border="1">
-        <tbody>
-            <tr>
-                <th style="width:5%;text-align:center;">নং</th>
-                <th style="width:60%;">নাম</th>
-                <th style="width:19%;text-align:center;">সম্পর্ক</th>
-                <th style="width:14%;text-align:center;">বয়স</th>
-            </tr>
-            <tr>
-                <td style="text-align:center;">১</td>
-                <td style=""> সুজন শেখ </td>
-                <td style="text-align:center;">পুত্র</td>
-                <td style="text-align:center;">২৩</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;">২</td>
-                <td style=""> মৌসুমি আক্তার </td>
-                <td style="text-align:center;">কন্যা</td>
-                <td style="text-align:center;">৩০</td>
-              </tr>
-            <tr>
-                <td style="text-align:center;">৩</td>
-                <td style=""> মিতু আক্তার </td>
-                <td style="text-align:center;">কন্যা </td>
-                <td style="text-align:center;">২৬</td>
-              </tr>
-            <tr>
-                <td style="text-align:center;">৪</td>
-                <td style=""> মিথিলা আক্তার </td>
-                <td style="text-align:center;">কন্যা</td>
-                <td style="text-align:center;">২৪</td>
-            </tr>
-                <td></td>
-                <td colspan="3" style="text-align:right;padding-right:100px;">উত্তরাধিকারীর সংখা <span id="">০৪</span>  জন</td>
-            </tr>
-            </tr>
-
-
-    </table>
-
-
-
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+              <div class="left-boxes-content">
+                  <div class="widget">
+                    <h5 class="widgetheading">ঠিকানা</h5>
+                  </div>
+                  <div class="important-links">
+											  
+						<address style="text-align: center;padding-bottom:1px;text-align:left">
+										<p>
+																					Mobile :01923842500<br/>
+																						Phone : 01842120449<br />
+																						E-mail :taranagarup3877@gmail.com<br/>
+											Web site : www.taranagarup.com											
+										</p>
+									</address>
+                  </div>
+              </div>
+          </div>
+      <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".7s">
+	   <div class="left-boxes-content">
+        <div class="widget">
+          <h5 class="widgetheading">ম্যাপ</h5>
+        </div>
+			<div class="important-links">
+						<p style='color: red'>Sorry google map problem, please check your net connection!!!</p>	
+			</div>
+		</div>
+    </div>
+  </div>
+<div id="sub-footer">
+  <div class="container">
+     <div class="row">
+        <div class="col-lg-6">
+           <div class="copyright">
+              <p>
+                    <span>Copyright &copy; 2016-2024 &nbsp; Innovation IT</span><br/>
+             </p>
+			 
+            </div>
+        </div>
+		<div class="col-lg-6">
+							<div>
+								<p>
+								Design & Developed by : 
+								<a href="http://www.innovationit.com.bd" target="_blank" style="color:#fff;">
+									Innovation IT
+								</a>
+								</p >
+							</div>
+						</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+  <!-- javascript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets_one/js/jquery.js"></script>
+    <script src="assets_one/js/jquery.lazyload.min.js"></script>
+    <script src="assets_one/js/jquery.easing.1.3.js"></script>
+    <script src="assets_one/js/bootstrap.min.js"></script>
+    <script src="assets_one/js/jquery.fs.boxer.js"></script>
+    <script src="assets_one/js/jquery.fitvids.js"></script>
+    <script src="assets_one/js/jquery.flexnav.js"></script>
+    <!-- <script src="assets_one/js/jquery.fancybox-media.js"></script> -->
+    <!-- <script src="assets_one/js/jquery.newsTicker.js"></script> -->
+    <script src="assets_one/js/slick.min.js"></script>
+    <script src="assets_one/js/google-code-prettify/prettify.js"></script>
+    <script src="assets_one/js/jquery.flexslider.js"></script>
+    <script src="assets_one/js/wow.js"></script>
+	
     <script>
-</body>
+      new WOW().init();
+  </script>
+  <script src="assets_one/js/custom.js"></script>
+  <script>
+    /*  - Boxer 
+    ---------------------------------------------------*/
+      jQuery(document).ready(function(){
+      jQuery(".boxer").boxer({ 
+        margin:100,
+        fixed: true
+      }); 
+      })
+    /*   - Boxer end 
+    ---------------------------------------------------*/
 
+  </script>
+<script>
+$(function() {
+    $("img.lazy").lazyload({
+            threshold : 200,
+            effect : "fadeIn"
+        });
+});
+</script>
+  <script>
+
+    $(".flexnav").flexNav();
+  </script>
+</body>
 </html>
